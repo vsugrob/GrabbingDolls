@@ -1,0 +1,33 @@
+﻿     /\
+    /A|B\
+ a /  |   \ b
+  /   |     \
+ /C   |      D\
+----------------
+   d  c   e
+
+a, b, c - known values.
+d, e - unkown values.
+
+system of equations:
+{
+	c == d + e,
+	a ^ 2 - d ^ 2 == b ^ 2 - e ^ 2
+}
+
+=>
+a ^ 2 - d ^ 2 == b ^ 2 - ( c - d ) ^ 2 =>
+a ^ 2 - b ^ 2 == d ^ 2 - ( c - d ) ^ 2 =>
+a ^ 2 - b ^ 2 == d ^ 2 - ( c ^ 2 - 2 * c * d + d ^ 2 ) =>
+a ^ 2 - b ^ 2 == d ^ 2 - c ^ 2 + 2 * c * d - d ^ 2 =>
+a ^ 2 - b ^ 2 == - c ^ 2 + 2 * c * d =>
+a ^ 2 - b ^ 2 + c ^ 2 == 2 * c * d =>
+( a ^ 2 - b ^ 2 + c ^ 2 ) / ( 2 * c ) == d
+This way value of d may be calculated.
+Value of e can be found: e = c - d.
+
+Angle A = pi / 2 - C
+Knowing that cos (C) = d / a
+and that C = acos ( d / a )
+we get: Angle A = pi / 2 - acos ( d / a ).
+Samewise for B: Angle B = pi / 2 - acos ( e / b ).
